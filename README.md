@@ -1,10 +1,16 @@
 # text-diff
 
+[![Clojars Project](https://img.shields.io/clojars/v/io.github.borkdude/text-diff.svg)](https://clojars.org/io.github.borkdude/text-diff)
+
 Line-level text diffing for Clojure, ClojureScript and babashka. Produces the same unified diff format as `git diff` and `diff -u`.
 
 ## Installation
 
-Use as a git dependency:
+```clojure
+io.github.borkdude/text-diff {:mvn/version "0.1.0"}
+```
+
+Or as a git dependency:
 
 ```clojure
 io.github.borkdude/text-diff {:git/sha "..."}
