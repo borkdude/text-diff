@@ -1,0 +1,8 @@
+{:paths ["src"]
+ :tasks
+ {test {:extra-paths ["test"]
+        :requires ([clojure.test :as t]
+                   [borkdude.text-diff-test])
+        :task (let [{:keys [fail error]} (t/run-tests 'borkdude.text-diff-test)]
+                (when (pos? (+ fail error))
+                  (throw (ex-info "Tests failed" {:babashka/exit 1}))))}}}
