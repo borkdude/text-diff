@@ -7,4 +7,5 @@
                    (when (pos? (+ fail error))
                      (throw (ex-info "Tests failed" {:babashka/exit 1}))))}
   test:clj {:task (clojure "-M:test")}
-  test {:depends [test:bb test:clj]}}}
+  test {:depends [test:bb test:clj]}
+  publish {:task (clojure "-T:build deploy")}}}
