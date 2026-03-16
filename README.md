@@ -47,6 +47,14 @@ Options:
 - `:filename` - filename for the header (default `"a"`)
 - `:context` - number of context lines (default `3`)
 
+### colorize-unified-diff
+
+Adds ANSI color codes to unified diff text (cyan hunk headers, red deletions, green additions):
+
+```clojure
+(println (td/colorize-unified-diff (td/unified-diff "a\nb\nc" "a\nB\nc" {:filename "test.clj"})))
+```
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
